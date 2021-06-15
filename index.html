@@ -6,12 +6,28 @@
     <title>Apple Clicker</title> <!-- title of page on tab -->
     <link href="style.css" rel="stylesheet" type="text/css"/> <!-- links the CSS -->
 		<link rel="icon" type="image/png" sizes="32x32" href="Images/favicon.png"> <!-- favicon -->
-   
+
   </head>
   
 	<body>
-		<script src="script.js"></script> <!-- links the JS -->
+        <script src="login.js"></script> <!-- links the login JS -->
+		<script src="script.js"></script> <!-- links the main JS -->
+        <button onclick="login()" class="login">Login</button>
+        <button onclick="register()" class="register">Register</button>
+        <img src="Images/clickButton.png" width="32" height="35">
+        <style>
+            .login {
+            position: absolute;
+            right: 5px;
+            top: 5px;
+            }
 
+            .register {
+            position: absolute;
+            right: 75px;
+            top: 5px;
+            }
+        </style>
 		<center> <!-- makes all the content centered -->
 			<img src="Images/clickButton.png" id="clickButton" onclick="increment()"> <!-- the image you have to click -->
 
