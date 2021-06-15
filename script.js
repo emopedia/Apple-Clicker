@@ -1,4 +1,4 @@
-(()=>{
+
 // all the variables
 var apples = 0;
 
@@ -42,7 +42,7 @@ var steveJobs = 0;
 
 
 // function that gets called when you click the apple logo
-const increment = function() {
+function increment() {
 	apples += applesPerClick; // adds the number of apples per click to your total apples
 	document.getElementById("showApples").innerText = apples; // uses DOM to change the number of apples in the HTMl
 
@@ -281,4 +281,4 @@ function buySteveJobs() {
 		alert("You don't have enough Apples!")
 	}
 }
-})();
+
