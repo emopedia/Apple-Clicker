@@ -1,3 +1,4 @@
+(()=>{
 // all the variables
 var apples = 0;
 
@@ -280,3 +281,4 @@ function buySteveJobs() {
 		alert("You don't have enough Apples!")
 	}
 }
+})();
