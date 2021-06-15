@@ -74,7 +74,7 @@ function buyIPhone() {
 		document.getElementById("iPhoneNum").innerText = iPhones;
 	
 
-		iPhoneCost *=2; // doubles price of that item 
+		iPhoneCost *=1.25; // doubles price of that item 
 
 		document.getElementById("iPhoneCost").innerText = iPhoneCost;
 
@@ -102,7 +102,7 @@ function buyIPad() {
 		document.getElementById("iPadNum").innerText = iPads;
 	
 
-		iPadCost *=2; // doubles price of that item
+		iPadCost *=1.25; // doubles price of that item
 
 		document.getElementById("iPadCost").innerText = iPadCost;
 
@@ -131,7 +131,7 @@ function buyPen() {
 		document.getElementById("penNum").innerText = pens;
 	
 
-		penCost *=2; // doubles price of that item
+		penCost *=1.25; // doubles price of that item
 
 		document.getElementById("penCost").innerText = penCost;
 
@@ -158,7 +158,7 @@ function buyAirPods() { // different functions for each item
 		document.getElementById("airPodsNum").innerText = airPods;
 	
 
-		airPodsCost *=2; // doubles price of that item
+		airPodsCost *=1.25; // doubles price of that item
 
 		document.getElementById("airPodsCost").innerText = airPodsCost;
 
@@ -187,7 +187,7 @@ function buyMac() {
 		document.getElementById("macNum").innerText = macs;
 	
 
-		macCost *=2; // doubles price of that item
+		macCost *=1.25; // doubles price of that item
 
 		document.getElementById("macCost").innerText = macCost;
 
@@ -214,7 +214,7 @@ function buyIMac() {
 		document.getElementById("iMacNum").innerText = iMacs;
 	
 
-		iMacCost *=2; // doubles price of that item
+		iMacCost *=1.25; // doubles price of that item
 
 		document.getElementById("iMacCost").innerText = iMacCost;
 
@@ -241,7 +241,7 @@ function buyAppleStore() {
 		document.getElementById("appleStoreNum").innerText = appleStores;
 	
 
-		appleStoreCost *=2; // doubles price of that item
+		appleStoreCost *=1.25; // doubles price of that item
 
 		document.getElementById("appleStoreCost").innerText = appleStoreCost;
 
@@ -268,7 +268,7 @@ function buySteveJobs() {
 		document.getElementById("steveJobsNum").innerText = steveJobs;
 	
 
-		steveJobsCost *=2; // doubles price of that item
+		steveJobsCost *=1.25; // doubles price of that item
 
 		document.getElementById("steveJobsCost").innerText = steveJobsCost;
 
@@ -281,4 +281,3 @@ function buySteveJobs() {
 		alert("You don't have enough Apples!")
 	}
 }
-
