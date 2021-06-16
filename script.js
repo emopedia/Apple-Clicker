@@ -75,7 +75,7 @@ var interval = setInterval(intervalFunction, 1000) // every second (1000 millise
 
 function increment() {
 	apples += applesPerClick; // adds the number of apples per click to your total apples
-	document.getElementById("showApples").innerText = "$" + apples; // uses DOM to change the number of apples in the HTMl
+	document.getElementById("showApples").innerText = "$" + abbreviateNumber(apples); // uses DOM to change the number of apples in the HTMl
 
 	if (apples >= 7800000000) // if it's higher than world population
 	{
