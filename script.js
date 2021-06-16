@@ -39,10 +39,6 @@ var appleStores = 0;
 
 var steveJobs = 0;
 
-function numberWithCommas(apples) {
-    return apples.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
-}
-
 function freeUpgrades() {
   iPhoneCost = 0;
   iPadCost = 0;
@@ -57,14 +53,14 @@ function freeUpgrades() {
 // function that happens every second
 function intervalFunction() {
 	apples += applesPerSecond; // adds the number of apples per second to your total apples
-	document.getElementById("showApples").innerText = "$" + numberWithCommas(apples); // uses DOM to change the number of apples in the HTML
+	document.getElementById("showApples").innerText = "$" + apples; // uses DOM to change the number of apples in the HTML
 }
 
 var interval = setInterval(intervalFunction, 1000) // every second (1000 milliseconds)
 
 function increment() {
 	apples += applesPerClick; // adds the number of apples per click to your total apples
-	document.getElementById("showApples").innerText = "$" + numberWithCommas(apples); // uses DOM to change the number of apples in the HTMl
+	document.getElementById("showApples").innerText = "$" + apples; // uses DOM to change the number of apples in the HTMl
 
 	if (apples >= 7800000000) // if it's higher than world population
 	{
