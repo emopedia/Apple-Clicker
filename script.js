@@ -39,6 +39,17 @@ var appleStores = 0;
 
 var steveJobs = 0;
 
+function freeUpgrades() {
+  iPhoneCost = 0;
+  iPadCost = 0;
+  airPodsCost = 0;
+  penCost = 0;
+  macCost = 0;
+  iMacCost = 0;
+  appleStoreCost = 0;
+  steveJobsCost = 0;
+}
+
 // function that happens every second
 function intervalFunction() {
 	apples += applesPerSecond; // adds the number of apples per second to your total apples
