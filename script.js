@@ -68,7 +68,7 @@ function freeUpgrades() {
 // function that happens every second
 function intervalFunction() {
 	apples += applesPerSecond; // adds the number of apples per second to your total apples
-	document.getElementById("showApples").innerText = "$" + apples; // uses DOM to change the number of apples in the HTML
+	document.getElementById("showApples").innerText = "$" + abbreviateNumber(apples); // uses DOM to change the number of apples in the HTML
 }
 
 var interval = setInterval(intervalFunction, 1000) // every second (1000 milliseconds)
