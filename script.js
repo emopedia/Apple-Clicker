@@ -45,7 +45,7 @@ var steveJobs = 0;
 // function that happens every second
 setInterval(function() {
 	apples += applesPerSecond; // adds the number of apples per second to your total apples
-	document.getElementById("showApples").innerText = apples; // uses DOM to change the number of apples in the HTML
+	document.getElementById("showApples").innerText = "$" + apples; // uses DOM to change the number of apples in the HTML
 }, 1000) // every second (1000 milliseconds)
 
 
