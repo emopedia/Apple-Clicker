@@ -50,6 +50,14 @@ function freeUpgrades() {
   steveJobsCost = 0;
 }
 
+if (typeof(Storage) !== "undefined") {
+  	// Store
+  	localStorage.setItem("apple", "apples");
+  	// Retrieve
+  	document.getElementById("result").innerHTML = localStorage.getItem("apple");
+} else {
+  	document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
+
 // function that happens every second
 function intervalFunction() {
 	apples += applesPerSecond; // adds the number of apples per second to your total apples
