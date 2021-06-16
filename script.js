@@ -1,5 +1,5 @@
 // all the variables
-var apples = 0;
+var apples = apple;
 
 var applesPerSecond = 0;
 
