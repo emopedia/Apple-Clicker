@@ -1,4 +1,3 @@
-
 // all the variables
 var apples = 0;
 
@@ -40,14 +39,13 @@ var appleStores = 0;
 
 var steveJobs = 0;
 
-
-
 // function that happens every second
-setInterval(function() {
+function intervalFunction() {
 	apples += applesPerSecond; // adds the number of apples per second to your total apples
 	document.getElementById("showApples").innerText = "$" + apples; // uses DOM to change the number of apples in the HTML
-}, 1000) // every second (1000 milliseconds)
+}
 
+var interval = setInterval(intervalFunction, 1000) // every second (1000 milliseconds)
 
 function increment() {
 	apples += applesPerClick; // adds the number of apples per click to your total apples
