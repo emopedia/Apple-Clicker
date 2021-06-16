@@ -39,6 +39,21 @@ var appleStores = 0;
 
 var steveJobs = 0;
 
+function abbreviateNumber(value) {
+  let newValue = value;
+  const suffixes = ["", "K", "M", "B", "T", "Q", "QT", "S", "ST", "O", "N", "D"];
+  let suffixNum = 0;
+  while (newValue >= 1000) {
+    newValue /= 1000;
+    suffixNum++;
+  }
+
+  newValue = newValue.toPrecision(3);
+
+  newValue += suffixes[suffixNum];
+  return newValue;
+}
+
 function freeUpgrades() {
   iPhoneCost = 0;
   iPadCost = 0;
