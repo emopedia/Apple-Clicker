@@ -41,16 +41,6 @@ var appleStores = 0;
 var steveJobs = 0;
 
 
-// function that gets called when you click the apple logo
-function increment() {
-	apples += applesPerClick; // adds the number of apples per click to your total apples
-	document.getElementById("showApples").innerText = apples; // uses DOM to change the number of apples in the HTMl
-
-	if (apples >= 7800000000) // if it's higher than world population
-	{
-		document.getElementById("gameOver").innerText = "You won the game! Apple dominates the Earth!"
-	}
-}
 
 // function that happens every second
 setInterval(function() {
@@ -59,225 +49,139 @@ setInterval(function() {
 }, 1000) // every second (1000 milliseconds)
 
 
-// different functions for each item
+function increment() {
+	apples += applesPerClick; // adds the number of apples per click to your total apples
+	document.getElementById("showApples").innerText = "$" + apples; // uses DOM to change the number of apples in the HTMl
+
+	if (apples >= 7800000000) // if it's higher than world population
+	{
+		document.getElementById("gameOver").innerText = "You won the game! Apple dominates the Earth!"
+	}
+}
+
 function buyIPhone() {
-
-	if (apples >= iPhoneCost) // checks if you have enough apples
-	{
-		
-		apples -= iPhoneCost; // subtracts cost apples 
-
-		document.getElementById("showApples").innerText = apples;
-
-		iPhones++; // increments number of that item 
-
+	if (apples >= iPhoneCost) {
+		apples -= iPhoneCost; 
+		document.getElementById("showApples").innerText = "$" + apples;
+		iPhones++; 
 		document.getElementById("iPhoneNum").innerText = iPhones;
-	
-
-		iPhoneCost *=1.25; // doubles price of that item 
-
+		iPhoneCost *=1.25; 
+    iPhoneCost = Math.round(iPhoneCost)
 		document.getElementById("iPhoneCost").innerText = iPhoneCost;
-
-
-		applesPerSecond += 1; // increases number of apples per second
-
+		applesPerSecond += 1; 
 		document.getElementById("showApplesPerSecond").innerText = applesPerSecond;	
-	
-	}	else { // if there enough apples
-		alert("You don't have enough Apples!") 
+	}	else { 
+    alert("You need " + (iPhoneCost-apples).toString() + " more apple(s) to buy this item.") 
 	}
 }
 
-// different functions for each item
 function buyIPad() {
-
-	if (apples >= iPadCost) { // checks if you have enough apples
-		
-		apples -= iPadCost; // subtracts cost apples 
-
-		document.getElementById("showApples").innerText = apples;
-
-		iPads++; // increments number of that item // increments number of that item // increments number of that item // increments number of that item
-
+	if (apples >= iPadCost) { 
+		apples -= iPadCost; 
+		document.getElementById("showApples").innerText = "$" + apples;
+		iPads++; 
 		document.getElementById("iPadNum").innerText = iPads;
-	
-
-		iPadCost *=1.25; // doubles price of that item
-
+		iPadCost *=1.25; 
+    iPadCost = Math.round(iPadCost)
 		document.getElementById("iPadCost").innerText = iPadCost;
-
-
-		applesPerClick += 1; // increases number of apples per click
-
+		applesPerClick += 1; 
 		document.getElementById("showApplesPerClick").innerText = applesPerClick;
-	
-	} else { // if there enough apples
-		alert("You don't have enough Apples!")
+	} else { 
+		alert("You need " + (iPadCost-apples).toString() + " more apple(s) to buy this item.") 
 	}
 }
 
-// different functions for each item
 function buyPen() {
-
-	if (apples >= penCost) // checks if you have enough apples
-	{
-		
-		apples -= penCost; // subtracts cost apples 
-
-		document.getElementById("showApples").innerText = apples;
-
-		pens++; // increments number of that item // increments number of that item // increments number of that item // increments number of that item
-
+	if (apples >= penCost) {
+		apples -= penCost; 
+		document.getElementById("showApples").innerText = "$" + apples;
+		pens++; 
 		document.getElementById("penNum").innerText = pens;
-	
-
-		penCost *=1.25; // doubles price of that item
-
-		document.getElementById("penCost").innerText = penCost;
-
-
-		applesPerSecond += 100; // increases number of apples per second
-
+		penCost *=1.25; 
+    penCost = Math.round(penCost)
+	  document.getElementById("penCost").innerText = penCost;
+		applesPerSecond += 100; 
 		document.getElementById("showApplesPerSecond").innerText = applesPerSecond;	
-
-	} else { // if there enough apples
-		alert("You don't have enough Apples!")
+	} else { 
+		alert("You need " + (penCost-apples).toString() + " more apple(s) to buy this item.") 
 	}
 }
 
-function buyAirPods() { // different functions for each item
-
-	if (apples >= airPodsCost) { // checks if you have enough apples
-		
-		apples -= airPodsCost; // subtracts cost apples 
-
-		document.getElementById("showApples").innerText = apples;
-
-		airPods++; // increments number of that item
-
+function buyAirPods() { 
+	if (apples >= airPodsCost) { 
+		apples -= airPodsCost; 
+		document.getElementById("showApples").innerText = "$" + apples;
+		airPods++; 
 		document.getElementById("airPodsNum").innerText = airPods;
-	
-
-		airPodsCost *=1.25; // doubles price of that item
-
+		airPodsCost *=1.25; 
+    airPodsCost = Math.round(airPodsCost)
 		document.getElementById("airPodsCost").innerText = airPodsCost;
-
-
-		applesPerClick += 100; // increases number of apples per click
-
+		applesPerClick += 100; 
 		document.getElementById("showApplesPerClick").innerText = applesPerClick;
-
-	}	else { // if there enough apples
-		alert("You don't have enough Apples!")
+	}	else { 
+		alert("You need " + (airPodsCost-apples).toString() + " more apple(s) to buy this item.") 
 	}
-
 }
 
 function buyMac() {
-
-	if (apples >= macCost)
-	{
-		
+	if (apples >= macCost) {
 		apples -= macCost;
-
-		document.getElementById("showApples").innerText = apples;
-
-		macs++; // increments number of that item
-
+		document.getElementById("showApples").innerText = "$" + apples;
+		macs++; 
 		document.getElementById("macNum").innerText = macs;
-	
-
-		macCost *=1.25; // doubles price of that item
-
+		macCost *=1.25; 
+    macCost = Math.round(macCost)
 		document.getElementById("macCost").innerText = macCost;
-
-
-		applesPerSecond += 1000; // increases number of apples per second
-
+		applesPerSecond += 1000; 
 		document.getElementById("showApplesPerSecond").innerText = applesPerSecond;	
-
-	}	else { // if there enough apples
-		alert("You don't have enough Apples!")
+	}	else { 
+		alert("You need " + (macCost-apples).toString() + " more apple(s) to buy this item.") 
 	}
 }
 
 function buyIMac() {
-
 	if (apples >= iMacCost) {
-		
 		apples -= iMacCost;
-
-		document.getElementById("showApples").innerText = apples;
-
-		iMacs++; // increments number of that item
-
+		document.getElementById("showApples").innerText = "$" + apples;
+		iMacs++; 
 		document.getElementById("iMacNum").innerText = iMacs;
-	
-
-		iMacCost *=1.25; // doubles price of that item
-
+		iMacCost *=1.25; 
+    iMacCost = Math.round(iMacCost)
 		document.getElementById("iMacCost").innerText = iMacCost;
-
-
-		applesPerClick += 10000; // increases number of apples per click
-
+		applesPerClick += 10000; 
 		document.getElementById("showApplesPerClick").innerText = applesPerClick;
-
-	}	else { // if there enough apples
-		alert("You don't have enough Apples!")
+	}	else { 
+		alert("You need " + (iMacCost-apples).toString() + " more apple(s) to buy this item.") 
 	}
 }
 
 function buyAppleStore() {
-
 	if (apples >= appleStoreCost) {
-		
 		apples -= appleStoreCost;
-
-		document.getElementById("showApples").innerText = apples;
-
-		appleStores++; // increments number of that item
-
-		document.getElementById("appleStoreNum").innerText = appleStores;
-	
-
-		appleStoreCost *=1.25; // doubles price of that item
-
+		document.getElementById("showApples").innerText = "$" + apples;
+		appleStores++; 
+		document.getElementById("appleStoreNum").innerText = appleStores;	
+		appleStoreCost *=1.25; 
+    appleStoreCost = Math.round(appleStoreCost)
 		document.getElementById("appleStoreCost").innerText = appleStoreCost;
-
-
-		applesPerSecond += 100000; // increases number of apples per second
-
+		applesPerSecond += 100000; 
 		document.getElementById("showApplesPerSecond").innerText = applesPerSecond;	
-
-	}	else { // if there enough apples
-		alert("You don't have enough Apples!")
+	}	else { 
+		alert("You need " + (appleStoreCost-apples).toString() + " more apple(s) to buy this item.") 
 	}
 }
-
 function buySteveJobs() {
-
 	if (apples >= steveJobsCost) {
-		
 		apples -= steveJobsCost;
-
-		document.getElementById("showApples").innerText = apples;
-
-		steveJobs++; // increments number of that item
-
+		document.getElementById("showApples").innerText = "$" + apples;
+		steveJobs++; 
 		document.getElementById("steveJobsNum").innerText = steveJobs;
-	
-
-		steveJobsCost *=1.25; // doubles price of that item
-
+		steveJobsCost *=1.25; 
+    steveJobsCost = Math.round(steveJobsCost)
 		document.getElementById("steveJobsCost").innerText = steveJobsCost;
-
-
-		applesPerClick += 1000000; // increases number of apples per click
-
+		applesPerClick += 1000000; 
 		document.getElementById("showApplesPerClick").innerText = applesPerClick;
-
-	}	else { // if there enough apples
-		alert("You don't have enough Apples!")
+	}	else { 
+		alert("You need " + (steveJobsCost-apples).toString() + " more apple(s) to buy this item.") 
 	}
 }
