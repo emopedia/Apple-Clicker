@@ -39,19 +39,8 @@ var appleStores = 0;
 
 var steveJobs = 0;
 
-function abbreviateNumber(value) {
-  let newValue = value;
-  const suffixes = ["", "K", "M", "B", "T", "Q", "QT", "S", "ST", "O", "N", "D"];
-  let suffixNum = 0;
-  while (newValue >= 1000) {
-    newValue /= 1000;
-    suffixNum++;
-  }
-
-  newValue = newValue.toPrecision(3);
-
-  newValue += suffixes[suffixNum];
-  return newValue;
+function numberWithCommas(apples) {
+    return apples.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
 }
 
 function freeUpgrades() {
@@ -68,14 +57,14 @@ function freeUpgrades() {
 // function that happens every second
 function intervalFunction() {
 	apples += applesPerSecond; // adds the number of apples per second to your total apples
-	document.getElementById("showApples").innerText = "$" + abbreviateNumber(apples); // uses DOM to change the number of apples in the HTML
+	document.getElementById("showApples").innerText = "$" + numberWithCommas(apples); // uses DOM to change the number of apples in the HTML
 }
 
 var interval = setInterval(intervalFunction, 1000) // every second (1000 milliseconds)
 
 function increment() {
 	apples += applesPerClick; // adds the number of apples per click to your total apples
-	document.getElementById("showApples").innerText = "$" + abbreviateNumber(apples); // uses DOM to change the number of apples in the HTMl
+	document.getElementById("showApples").innerText = "$" + numberWithCommas(apples); // uses DOM to change the number of apples in the HTMl
 
 	if (apples >= 7800000000) // if it's higher than world population
 	{
