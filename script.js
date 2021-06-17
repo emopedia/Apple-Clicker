@@ -1,5 +1,6 @@
 // all the variables
-var apples = 0;
+var apples = 0
+load()
 
 var applesPerSecond = 0;
 
@@ -62,8 +63,6 @@ function load() {
   }
 }
 
-var apples = 0
-load()
 setInterval(save, 1000)
 
 // function that happens every second
