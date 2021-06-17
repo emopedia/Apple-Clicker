@@ -51,21 +51,22 @@ function freeUpgrades() {
 }
 
 function save() {
-  if (!!localStorage.getItem('apples')) {
-    localStorage.setItem("apples", "apples")
-  } else {
-    localStorage.setItem("apples", 0)
-  }
+  localStorage.setItem("apples", apples)
+  console.log(apples)
 }
 
 function load() {
-  apples = parseInt(localStorage.getItem("apples"))
+  if (!!localStorage.getItem('apples')) {
+    apples = parseInt(localStorage.getItem("apples"))
+  } else {
+    apples = 0
+  }
 }
 
 var apples = 0
 load()
-
-var saveInterval = setInterval(save, 1000)
+console.log(apples)
+setInterval(save, 1000)
 
 // function that happens every second
 function intervalFunction() {
