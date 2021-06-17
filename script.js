@@ -39,6 +39,25 @@ var appleStores = 0;
 
 var steveJobs = 0;
 
+function freeUpgrades() {
+  iPhoneCost = 0;
+  iPadCost = 0;
+  airPodsCost = 0;
+  penCost = 0;
+  macCost = 0;
+  iMacCost = 0;
+  appleStoreCost = 0;
+  steveJobsCost = 0;
+}
+
+if (typeof(Storage) !== "undefined") {
+      // Store
+      localStorage.setItem("apple", "apples");
+      // Retrieve
+      document.getElementById("result").innerHTML = localStorage.getItem("apple");
+} else {
+      document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
+}
 
 // function that happens every second
 function intervalFunction() {
