@@ -1,6 +1,5 @@
 // all the variables
-var apples = 0
-load()
+var apples = 0;
 
 var applesPerSecond = 0;
 
@@ -39,6 +38,9 @@ var iMacs = 0;
 var appleStores = 0;
 
 var steveJobs = 0;
+
+// load variables
+load();
 
 function freeUpgrades() {
   iPhoneCost = 0;
