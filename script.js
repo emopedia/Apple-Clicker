@@ -52,9 +52,9 @@ function freeUpgrades() {
 
 if (typeof(Storage) !== "undefined") {
       // Store
-      localStorage.setItem("apple", "apples");
+      localStorage.setItem('apples', apples);
       // Retrieve
-      document.getElementById("result").innerHTML = localStorage.getItem("apple");
+      document.getElementById("result").innerHTML = localStorage.getItem('apples')
 } else {
       document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
 }
