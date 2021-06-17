@@ -52,7 +52,6 @@ function freeUpgrades() {
 
 function save() {
   localStorage.setItem("apples", apples)
-  console.log(apples)
 }
 
 function load() {
@@ -65,7 +64,6 @@ function load() {
 
 var apples = 0
 load()
-console.log(apples)
 setInterval(save, 1000)
 
 // function that happens every second
