@@ -99,7 +99,7 @@ function increment() {
 	apples += applesPerClick; // adds the number of apples per click to your total apples
 	document.getElementById("showApples").innerText = "$" + apples; // uses DOM to change the number of apples in the HTMl
 
-	if (apples >= 7800000000) // if it's higher than world population
+	if (apples >= 7870000000) // if it's higher than world population
 	{
 		document.getElementById("gameOver").innerText = "You won the game! Apple dominates the Earth!"
 	}
