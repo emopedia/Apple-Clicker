@@ -69,9 +69,8 @@ function load() {
   } else {
     applesPerSecond = 0
   }
-  }
 }
-}
+
 
 setInterval(save, 1000)
 
