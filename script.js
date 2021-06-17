@@ -52,14 +52,14 @@ function freeUpgrades() {
 
 function save() {
   if (!!localStorage.getItem('apples')) {
-    localStorage.setItem('apples', apples);
+    localStorage.setItem("apples", "apples")
   } else {
-    localStorage.setItem('apples', 0)
+    localStorage.setItem("apples", 0)
   }
 }
 
 function load() {
-  apples = localStorage.getItem('apples').parseInt()
+  apples = parseInt(localStorage.getItem("apples"))
 }
 
 var apples = 0
