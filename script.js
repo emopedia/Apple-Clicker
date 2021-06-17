@@ -41,8 +41,6 @@ var steveJobs = 0;
 
 // load variables
 loadApples();
-loadAPS();
-loadAPC();
 
 function freeUpgrades() {
   iPhoneCost = 0;
@@ -69,21 +67,6 @@ function loadApples() {
   }
 }
 
-function loadAPS() {
-  if (!!localStorage.getItem('applesPerSecond')) {
-    applesPerSecond = parseInt(localStorage.getItem("applesPerSecond"))
-  } else {
-    applesPerSecond = 0
-  }
-}
-
-function loadAPC() {
-  if (!!localStorage.getItem('applesPerClick')) {
-    applesPerClick = parseInt(localStorage.getItem("applesPerClick"))
-  } else {
-    applesPerClick = 1
-  }
-}
 
 setInterval(save, 1000)
 
