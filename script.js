@@ -55,6 +55,8 @@ function freeUpgrades() {
 
 function save() {
   localStorage.setItem("apples", apples)
+  localStorage.setItem("applesPerSecond", applesPerSecond)
+  localStorage.setItem("applesPerClick", applesPerClick)
 }
 
 function load() {
@@ -62,7 +64,13 @@ function load() {
     apples = parseInt(localStorage.getItem("apples"))
   } else {
     apples = 0
+  if (!!localStorage.getItem('applesPerSecond')) {
+    apples = parseInt(localStorage.getItem("applesPerSecond"))
+  } else {
+    applesPerSecond = 0
   }
+  }
+}
 }
 
 setInterval(save, 1000)
