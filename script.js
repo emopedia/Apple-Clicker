@@ -50,14 +50,22 @@ function freeUpgrades() {
   steveJobsCost = 0;
 }
 
-if (typeof(Storage) !== "undefined") {
-      // Store
-      localStorage.setItem('apples', apples);
-      // Retrieve
-      document.getElementById("result").innerHTML = localStorage.getItem('apples')
-} else {
-      document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
+function save() {
+  if (!!localStorage.getItem('apples')) {
+    localStorage.setItem("apples", "apples")
+  } else {
+    localStorage.setItem("apples", 0)
+  }
 }
+
+function load() {
+  apples = localStorage.getItem("apples").toInt()
+}
+
+var apples = 0
+load()
+
+var saveInterval = setInterval(save, 1000)
 
 // function that happens every second
 function intervalFunction() {
