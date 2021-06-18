@@ -78,9 +78,49 @@ function load() {
   } else {
     applesPerClick = 0
   }
+  if (!!localStorage.getItem("iPhones")) {
+    iPhones = parseInt(localStorage.getItem("iPhones"))
+  } else {
+    iPhones = 0
+  }
+  if (!!localStorage.getItem("iPads")) {
+    iPads = parseInt(localStorage.getItem("iPads"))
+  } else {
+    iPads = 0
+  }
+  if (!!localStorage.getItem("airPods")) {
+    airPods = parseInt(localStorage.getItem("airPods"))
+  } else {
+    airPods = 0
+  }
+  if (!!localStorage.getItem("pens")) {
+    pens = parseInt(localStorage.getItem("pens"))
+  } else {
+    pens = 0
+  }
+  if (!!localStorage.getItem("macs")) {
+    macs = parseInt(localStorage.getItem("macs"))
+  } else {
+    macs = 0
+  }
+  if (!!localStorage.getItem("iMacs")) {
+    iMacs = parseInt(localStorage.getItem("iMacs"))
+  } else {
+    iMacs = 0
+  }
+  if (!!localStorage.getItem("appleStores")) {
+    appleStores = parseInt(localStorage.getItem("appleStores"))
+  } else {
+    appleStores = 0
+  }
+  if (!!localStorage.getItem("steveJobs")) {
+    steveJobs = parseInt(localStorage.getItem("steveJobs"))
+  } else {
+    steveJobs = 0
+  }
 }
 
-setInterval(save, 1000)
+setInterval(save, 60000)
 
 // function that happens every second
 function intervalFunction() {
