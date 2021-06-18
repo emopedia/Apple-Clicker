@@ -1,46 +1,31 @@
+
 // all the variables
 var apples = 0;
-
 var applesPerSecond = 0;
-
 var applesPerClick = 1;
 
 // costs of items
 var iPhoneCost = 10;
-
 var iPadCost = 10;
-
 var airPodsCost = 500;
-
 var penCost = 200;
-
 var macCost = 10000;
-
 var iMacCost = 1000000;
-
 var appleStoreCost = 10000000;
-
 var steveJobsCost = 1000000000;
 
 // how many items you have
 var iPhones = 0;
-
 var iPads = 0;
-
 var airPods = 0;
-
 var pens = 0;
-
 var macs = 0;
-
 var iMacs = 0;
-
 var appleStores = 0;
-
 var steveJobs = 0;
 
 // load variables
-loadApples();
+load();
 
 function freeUpgrades() {
   iPhoneCost = 0;
@@ -57,16 +42,43 @@ function save() {
   localStorage.setItem("apples", apples)
   localStorage.setItem("applesPerSecond", applesPerSecond)
   localStorage.setItem("applesPerClick", applesPerClick)
+
+  localStorage.setItem("iPhoneCost", iPhoneCost)
+  localStorage.setItem("iPadCost", iPadCost)
+  localStorage.setItem("airPodsCost", airPodsCost)
+  localStorage.setItem("penCost", penCost)
+  localStorage.setItem("macCost", macCost)
+  localStorage.setItem("iMacCost", iMacCost)
+  localStorage.setItem("appleStoreCost", appleStoreCost)
+  localStorage.setItem("steveJobsCost", steveJobsCost)
+  
+  localStorage.setItem("iPhones", iPhones)
+  localStorage.setItem("iPads", iPads)
+  localStorage.setItem("airPods", airPods)
+  localStorage.setItem("pens", pens)
+  localStorage.setItem("macs", macs)
+  localStorage.setItem("iMacs", iMacs)
+  localStorage.setItem("appleStores", appleStores)
+  localStorage.setItem("steveJobs", steveJobs)
 }
 
-function loadApples() {
-  if (!!localStorage.getItem('apples')) {
+function load() {
+  if (!!localStorage.getItem("apples")) {
     apples = parseInt(localStorage.getItem("apples"))
   } else {
     apples = 0
   }
+  if (!!localStorage.getItem("applesPerSecond")) {
+    applesPerSecond = parseInt(localStorage.getItem("applesPerSecond"))
+  } else {
+    applesPerSecond = 0
+  }
+  if (!!localStorage.getItem("applesPerClick")) {
+    applesPerClick = parseInt(localStorage.getItem("applesPerClick"))
+  } else {
+    applesPerClick = 0
+  }
 }
-
 
 setInterval(save, 1000)
 
