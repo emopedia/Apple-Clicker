@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- sets width to device width, and initial zoom level -->
     <title>Apple Clicker</title> <!-- title of page on tab -->
     <link href="style.css" rel="stylesheet" type="text/css"/> <!-- links the CSS -->
+    <link href="menu.html" rel="stylesheet" type="text/html"/>
 		<link rel="icon" type="image/png" sizes="32x32" href="Images/favicon.png"> <!-- favicon -->
     <script type="text/javascript"> 
     function disableselect(e){  
@@ -34,7 +35,7 @@
             Login</button>
             <button onclick="location.href='https://clicker.liatulon.tk/register'" type="button" class="register">
                 Register</button>
-        <img src="Images/clickButton.png" id="modMenu" width="32" height="35">
+        <img src="Images/clickButton.png" id="modMenu" width="32" height="35" ondragstart="return false;">
 
         <style>
             .login {
@@ -48,9 +49,44 @@
             right: 75px;
             top: 5px;
             }
+            html,
+            body {
+                width: 100%;
+                height: 100%;
+                font-family: "Open Sans", sans-serif;
+                padding: 0;
+                margin: 0;
+            }
+
+            #context-menu {
+                position: fixed;
+                z-index: 10000;
+                width: 150px;
+                background: #1b1a1a;
+                border-radius: 5px;
+                transform: scale(0);
+                transform-origin: top left;
+            }
+
+            #context-menu.visible {
+                transform: scale(1);
+                transition: transform 200ms ease-in-out;
+            }
+
+            #context-menu .item {
+                padding: 8px 10px;
+                font-size: 15px;
+                color: #eee;
+                cursor: pointer;
+                border-radius: inherit;
+            }
+
+            #context-menu .item:hover {
+                background: #343434;
+            }
         </style>
 		<center> <!-- makes all the content centered -->
-			<img src="Images/clickButton.png" id="clickButton" onclick="increment()"> <!-- the image you have to click -->
+			<img src="Images/clickButton.png" id="clickButton" onclick="increment()" ondragstart="return false;"> <!-- the image you have to click -->
 
 			<div id="info"> <!-- contains the info (view below), in <span> tags because they constantly evolve -->
 				<p id="appleCounter">Apples = <span id="showApples" class="number">$0</span></p> <!-- shows number of apples -->
@@ -66,7 +102,7 @@
 			<div class="itemContainer"> <!-- contains 4 items that you can buy -->
 				<div class="item"> <!-- an item -->
 					<div class="containerImage"> <!-- contains image -->
-						<img src="Images/Items/iPhone.webp" id="iPhoneImage" class="itemImage" style="width:100px;height:170px;">
+						<img src="Images/Items/iPhone.webp" id="iPhoneImage" class="itemImage" style="width:100px;height:170px;" ondragstart="return false;">
 
 						<div class="buyButtonContainer"> <!-- contains button to buy item -->
 							<button onclick="buyIPhone()" class="buyButton">Buy</button>
@@ -84,7 +120,7 @@
 
 				<div class="item"> <!-- an item -->
 					<div class="containerImage"> <!-- contains image -->
-						<img src="Images/Items/iPad.png" id="iPadImage" class="itemImage" style="width:140px;height:180px;">
+						<img src="Images/Items/iPad.png" id="iPadImage" class="itemImage" style="width:140px;height:180px;" ondragstart="return false;">
 
 						<div class="buyButtonContainer"> <!-- contains button to buy item -->
 							<button onclick="buyIPad()" class="buyButton">Buy</button>
@@ -102,7 +138,7 @@
 
 				<div class="item"> <!-- an item -->
 					<div class="containerImage"> <!-- contains image -->
-						<img src="Images/Items/pen.webp" id="penImage" class="itemImage" style="width:150px;height:180px">
+						<img src="Images/Items/pen.webp" id="penImage" class="itemImage" style="width:150px;height:180px" ondragstart="return false;">
 				
 						<div class="buyButtonContainer"> <!-- contains button to buy item -->
 							<button onclick="buyPen()" class="buyButton">Buy</button>
@@ -120,7 +156,7 @@
 				
 				<div class="item"> <!-- an item -->
 					<div class="containerImage"> <!-- contains image -->
-						<img src="Images/Items/airPods.webp" class="itemImage" style="width:180px;height:180px">
+						<img src="Images/Items/airPods.webp" class="itemImage" style="width:180px;height:180px" ondragstart="return false;">
 						
 						<div class="buyButtonContainer"> <!-- contains button to buy item -->
 							<button onclick="buyAirPods()" class="buyButton">Buy</button>
@@ -141,7 +177,7 @@
 			<div class="itemContainer"> <!-- contains 4 items that you can buy -->
 				<div class="item"> <!-- an item -->
 					<div class="containerImage"> <!-- contains image -->
-						<img src="Images/Items/mac.png" class="itemImage" style="width:340px;height:180px">
+						<img src="Images/Items/mac.png" class="itemImage" style="width:340px;height:180px" ondragstart="return false;">
 						
 						<div class="buyButtonContainer"> <!-- contains button to buy item -->
 							<button onclick="buyMac()" class="buyButton">Buy</button>
@@ -159,7 +195,7 @@
 
 				<div class="item"> <!-- an item -->
 					<div class="containerImage"> <!-- contains image -->
-						<img src="Images/Items/iMac.png" id="iMacImage" class="itemImage" style="width:200px;height:180px">
+						<img src="Images/Items/iMac.png" id="iMacImage" class="itemImage" style="width:200px;height:180px" ondragstart="return false;">
 
 						<div class="buyButtonContainer"> <!-- contains button to buy item -->
 							<button onclick="buyIMac()" class="buyButton">Buy</button>
@@ -177,7 +213,7 @@
 
 				<div class="item"> <!-- makes item go to right -->
 					<div class="containerImage"> <!-- contains image -->
-						<img src="Images/Items/appleStore.jpg" class="itemImage" style="width:290px;height:180px">
+						<img src="Images/Items/appleStore.jpg" class="itemImage" style="width:290px;height:180px" ondragstart="return false;">
 						
 						<div class="buyButtonContainer"> <!-- contains button to buy item -->
 							<button onclick="buyAppleStore()" class="buyButton">Buy</button>
@@ -197,7 +233,7 @@
 					<div class="containerImage">
 
 						<div class="container">
-							<img src="Images/Items/steveJobs.png" class="itemImage" style="width:300px;height:180px">
+							<img src="Images/Items/steveJobs.png" class="itemImage" style="width:300px;height:180px" ondragstart="return false;">
 						
 							<div class="buyButtonContainer"> <!-- contains button to buy item -->
 								<button onclick="buySteveJobs()" class="buyButton">Buy</button>
@@ -215,5 +251,80 @@
 				</div>
 			</div>
 		</center>
-  </body>
+  <body>
+
+      <div id="context-menu">
+      <div class="item">Copy (Ctrl+C)</div>
+      <div class="item">Paste (Ctrl+V)</div>
+      <div class="item">Reload (Ctrl+R)</div>
+      <div class="item">Print (Ctrl+P</div>
+      <div class="item">Tools (Ctrl+Shift+I)</div>
+    </div>
+
+    <script>
+      const contextMenu = document.getElementById("context-menu");
+      const scope = document.querySelector("body");
+
+      const normalizePozition = (mouseX, mouseY) => {
+        // ? compute what is the mouse position relative to the container element (scope)
+        let {
+          left: scopeOffsetX,
+          top: scopeOffsetY,
+        } = scope.getBoundingClientRect();
+        
+        scopeOffsetX = scopeOffsetX < 0 ? 0 : scopeOffsetX;
+        scopeOffsetY = scopeOffsetY < 0 ? 0 : scopeOffsetY;
+       
+        const scopeX = mouseX - scopeOffsetX;
+        const scopeY = mouseY - scopeOffsetY;
+
+        // ? check if the element will go out of bounds
+        const outOfBoundsOnX =
+          scopeX + contextMenu.clientWidth > scope.clientWidth;
+
+        const outOfBoundsOnY =
+          scopeY + contextMenu.clientHeight > scope.clientHeight;
+
+        let normalizedX = mouseX;
+        let normalizedY = mouseY;
+
+        // ? normalzie on X
+        if (outOfBoundsOnX) {
+          normalizedX =
+            scopeOffsetX + scope.clientWidth - contextMenu.clientWidth;
+        }
+
+        // ? normalize on Y
+        if (outOfBoundsOnY) {
+          normalizedY =
+            scopeOffsetY + scope.clientHeight - contextMenu.clientHeight;
+        }
+
+        return { normalizedX, normalizedY };
+      };
+
+      scope.addEventListener("contextmenu", (event) => {
+        event.preventDefault();
+
+        const { clientX: mouseX, clientY: mouseY } = event;
+
+        const { normalizedX, normalizedY } = normalizePozition(mouseX, mouseY);
+
+        contextMenu.classList.remove("visible");
+
+        contextMenu.style.top = `${normalizedY}px`;
+        contextMenu.style.left = `${normalizedX}px`;
+
+        setTimeout(() => {
+          contextMenu.classList.add("visible");
+        });
+      });
+
+      scope.addEventListener("click", (e) => {
+        // ? close the menu if the user clicks outside of it
+        if (e.target.offsetParent != contextMenu) {
+          contextMenu.classList.remove("visible");
+        }
+      });
+    </script>
 </html>
