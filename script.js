@@ -118,10 +118,49 @@ function load() {
   } else {
     steveJobs = 0
   }
+  if (!!localStorage.getItem("iPhonesCost")) {
+    iPhonesCost = parseInt(localStorage.getItem("iPhonesCost"))
+  } else {
+    iPhonesCost = 10
+  }
+  if (!!localStorage.getItem("iPadsCost")) {
+    iPadsCost = parseInt(localStorage.getItem("iPadsCost"))
+  } else {
+    iPadsCost = 10
+  }
+  if (!!localStorage.getItem("airPodsCost")) {
+    airPodsCost = parseInt(localStorage.getItem("airPodsCost"))
+  } else {
+    airPodsCost = 500
+  }
+  if (!!localStorage.getItem("pensCost")) {
+    pensCost = parseInt(localStorage.getItem("pensCost"))
+  } else {
+    pensCost = 200
+  }
+  if (!!localStorage.getItem("macCost")) {
+    macCost = parseInt(localStorage.getItem("macCost"))
+  } else {
+    macCost = 10000
+  }
+  if (!!localStorage.getItem("iMacCost")) {
+    iMacCost = parseInt(localStorage.getItem("iMacCost"))
+  } else {
+    iMacCost = 1000000
+  }
+  if (!!localStorage.getItem("appleStoreCost")) {
+    appleStoreCost = parseInt(localStorage.getItem("appleStoreCost"))
+  } else {
+    appleStoreCost = 10000000
+  }
+  if (!!localStorage.getItem("steveJobsCost")) {
+    steveJobsCost = parseInt(localStorage.getItem("steveJobsCost"))
+  } else {
+    steveJobsCost = 1000000000
+  }
 }
 
-setInterval(save, 60000)
-
+setInterval(save, 1000)
 // function that happens every second
 function intervalFunction() {
 	apples += applesPerSecond; // adds the number of apples per second to your total apples
