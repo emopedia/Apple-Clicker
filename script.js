@@ -76,7 +76,7 @@ function load() {
   if (!!localStorage.getItem("applesPerClick")) {
     applesPerClick = parseInt(localStorage.getItem("applesPerClick"))
   } else {
-    applesPerClick = 0
+    applesPerClick = 1
   }
   if (!!localStorage.getItem("iPhones")) {
     iPhones = parseInt(localStorage.getItem("iPhones"))
