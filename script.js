@@ -38,6 +38,31 @@ function freeUpgrades() {
   steveJobsCost = 0;
 }
 
+function reset_game() {
+  apples = 0;
+  applesPerSecond = 0;
+  applesPerClick = 1;
+
+  iPhoneCost = 10;
+  iPadCost = 10;
+  airPodsCost = 500;
+  penCost = 200;
+  macCost = 10000;
+  iMacCost = 1000000;
+  appleStoreCost = 10000000;
+  steveJobsCost = 1000000000;
+
+  iPhones = 0;
+  iPads = 0;
+  airPods = 0;
+  pens = 0;
+  macs = 0;
+  iMacs = 0;
+  appleStores = 0;
+  steveJobs = 0;
+  save();
+}
+
 function save() {
   localStorage.setItem("apples", apples)
   localStorage.setItem("applesPerSecond", applesPerSecond)
@@ -160,7 +185,7 @@ function load() {
   }
 }
 
-setInterval(save, 1000)
+saveInterval = setInterval(save, 100)
 // function that happens every second
 function intervalFunction() {
 	apples += applesPerSecond; // adds the number of apples per second to your total apples
