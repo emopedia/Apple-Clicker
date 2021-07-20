@@ -31,16 +31,12 @@
 
         <script src="login.js"></script> <!-- links the login JS -->
 		<script src="script.js"></script> <!-- links the main JS -->
-		<div id="loginDiv"  style="display:none;" class="loginDiv" >Login</div>
-		<input type="button" name="login" class="login" value="Login" onclick="showDiv()" />
+		<button onclick="location.href='https://clicker.liatulon.tk/login'" type="button" class="login">
+			Login</button>
 		<button onclick="location.href='https://clicker.liatulon.tk/register'" type="button" class="register">
 			Register</button>
 		<img src="Images/clickButton.png" id="modMenu" width="32" height="35" ondragstart="return false;">
-		<script>
-		function showDiv() {
-			document.getElementById('loginDiv').style.display = "block";
-		}
-		</script>
+
 		<style>
 			
             .login {
@@ -54,14 +50,6 @@
             right: 75px;
             top: 5px;
             }
-			
-	    .loginDiv {
-	    border-radius: 10px;
-	    color: white;
-	    background-color: black;
-	    opacity: .7;
-	    width: 40%;
-	    }
             html,
             body {
                 width: 100%;
