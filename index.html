@@ -31,11 +31,16 @@
 
         <script src="login.js"></script> <!-- links the login JS -->
 		<script src="script.js"></script> <!-- links the main JS -->
-		<button onclick="location.href='https://clicker.liatulon.tk/login'" type="button" class="login">
-			Login</button>
+		<div id="loginDiv"  style="display:none;" class="login" >Login</div>
+		<input type="button" name="login" class="login" value="Show Div" onclick="showDiv()" />
 		<button onclick="location.href='https://clicker.liatulon.tk/register'" type="button" class="register">
 			Register</button>
 		<img src="Images/clickButton.png" id="modMenu" width="32" height="35" ondragstart="return false;">
+		<script>
+		function showDiv() {
+			document.getElementById('loginDiv').style.display = "block";
+		}
+		</script>
 		<style>
 			
             .login {
