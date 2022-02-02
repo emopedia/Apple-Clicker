@@ -1,6 +1,10 @@
-.play {
-    position: absolute;
-    right: 5px;
-    top: 5px;
+div .play {
+    background-color: rgb(75,100,255);
+    color: black;
+    font-size: 45px;
+    font-family: monospace;
+    margin: auto;
+    padding: 1rem 3rem;
+    border-radius: 20%;
+    border-style: none;
 }
-
