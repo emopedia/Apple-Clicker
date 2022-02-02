@@ -69,6 +69,7 @@ section {
     width: 100%;
     overflow: hidden;
     line-height: 0;
+    transform: rotate(180deg);
 }
 
 .wave2 svg {
