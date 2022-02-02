@@ -29,7 +29,7 @@ section {
 
 .section_white {
     padding: 100px 20vw;
-    background-color: var(--white);
+    background-color: white;
 }
 
 .section_pink {
