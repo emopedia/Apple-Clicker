@@ -97,7 +97,7 @@ section {
 }
 
 .play {
-	border-radius: 10px;
+	border-radius: 30px;
   	background-color: var(--pink);
   	border: none;
   	color: rgba(0,0,0,0.7);
@@ -110,6 +110,16 @@ section {
   	cursor: pointer;
 }
 
+@keyframes hover {
+    0% {}
+    75% {border-radius: 10px}
+    100% {border-radius: 30px}
+}
+
+.play:hover {
+    animation: hover 1s
+}
+
 /** For mobile devices **/
 @media (max-width: 767px) {
     .wave2 svg {
@@ -117,4 +127,5 @@ section {
         height: 102px;
     }
 }
+
 
