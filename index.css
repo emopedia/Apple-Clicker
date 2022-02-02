@@ -93,6 +93,7 @@ section {
 	color: white;
 	background-color: rgba(0,0,0,0.7);
 	width: 80%;
+    transform: translate(0,-35%); 
 }
 
 .play {
