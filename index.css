@@ -4,7 +4,7 @@
 
 /* Center a Div */
 .center {
-    margin: none;
+    margin: auto;
     width: 100%;
     text-align: center;
     padding: 50px;
