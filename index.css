@@ -75,9 +75,8 @@ section {
 .wave2 svg {
     position: relative;
     display: block;
-    width: calc(100% + 1.3px);
-    height: 111px;
-    transform: rotateY(180deg);
+    width: calc(136% + 1.3px);
+    height: 86px;
 }
 
 .wave2 .shape-fill {
@@ -88,6 +87,6 @@ section {
 @media (max-width: 767px) {
     .wave2 svg {
         width: calc(109% + 1.3px);
-        height: 111px;
+        height: 86px;
     }
 }
