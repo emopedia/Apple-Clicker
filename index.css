@@ -1,6 +1,9 @@
 .play {
     background-color: black;
-    color: white;
-    font-size: 100px;
+    color: rgb(75,100,255);
+    font-size: 10rem;
     margin: auto;
+    padding: 10rem 30rem;
+    border-radius: 100px;
 }
+
