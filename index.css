@@ -1,6 +1,6 @@
 .play {
-    position: absolute;
-    display: flex;
-    text-align: center;
+    background-color: black;
+    color: white;
+    font-size: 25px;
     margin: auto;
 }
