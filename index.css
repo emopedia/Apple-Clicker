@@ -4,7 +4,6 @@
 
 /* Center a Div */
 .center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    margin: auto;
+    text-align: center;
 }
