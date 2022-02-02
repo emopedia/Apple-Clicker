@@ -1,22 +1,34 @@
-.play_button {
-    font-size: 1.5em;
+:root {
+    --pink: #dc5cb4;
+    --brown: #744c5c;
+    --white: #ecdcbc;
+    --black: #3c3c4c;
 }
 
-/* Center a Div */
 body {
-    background-color: aqua;
-}
-
-.section1 {
-    background-color: white;
+    margin: 0;
+    font-family: 'Prompt', sans-serif;
+    color: white;
+    background-color: var(--black);
 }
 
 section {
-    position: absolute;
-    width: 100%;
-    height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 400px;
+    padding: 100px 20vw;
 }
-body {
-  margin: 0;
-  overflow: overlay;
+
+.section_brown {
+    background-color: var(--brown);
+}
+
+.section_white {
+    background-color: var(--white);
+}
+
+.section_pink {
+    background-color: var(--pink);
 }
