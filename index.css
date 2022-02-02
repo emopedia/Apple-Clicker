@@ -18,19 +18,23 @@ section {
     flex-direction: column;
     align-items: center;
     min-height: 400px;
-    padding: 100px 20vw;
+    font-size: 1.5rem;
+    padding: 150px 20vw 100px 20vw;
 }
 
 .section_brown {
     background-color: var(--brown);
+    padding: 100px 20vw;
 }
 
 .section_white {
+    padding: 100px 20vw;
     background-color: var(--white);
 }
 
 .section_pink {
     background-color: var(--pink);
+    padding: 100px 20vw;
 }
 
 .wave1 {
