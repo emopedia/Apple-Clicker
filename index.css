@@ -33,13 +33,7 @@ section {
     background-color: var(--pink);
 }
 
-
-
-
-
-
-
-.wave {
+.wave1 {
     position: absolute;
     top: 0;
     left: 0;
@@ -48,7 +42,7 @@ section {
     line-height: 0;
 }
 
-.wave svg {
+.wave1 svg {
     position: relative;
     display: block;
     width: calc(100% + 1.3px);
@@ -56,14 +50,43 @@ section {
     transform: rotateY(180deg);
 }
 
-.wave .shape-fill {
+.wave1 .shape-fill {
     fill: #3C3C4C;
 }
 
 /** For mobile devices **/
 @media (max-width: 767px) {
-    .wave svg {
+    .wave1 svg {
         width: calc(109% + 1.3px);
         height: 123px;
+    }
+}
+
+.wave2 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.wave2 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 111px;
+    transform: rotateY(180deg);
+}
+
+.wave2 .shape-fill {
+    fill: #744C5C;
+}
+
+/** For mobile devices **/
+@media (max-width: 767px) {
+    .wave2 svg {
+        width: calc(109% + 1.3px);
+        height: 111px;
     }
 }
